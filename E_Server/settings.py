@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.user',
+    'apps.questions',
+    'apps.paper',
+    'apps.examination',
+    'apps.relation',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +81,11 @@ WSGI_APPLICATION = 'E_Server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'e_database',
+        'USER': 'root',
+        'PASSWORD': '258013',
+        'HOST': '127.0.0.1',
     }
 }
 

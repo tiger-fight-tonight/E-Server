@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class PaperConfig(AppConfig):
-    name = 'paper'
+    name = 'apps.paper'
