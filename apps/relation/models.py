@@ -1,10 +1,10 @@
 from django.db import models
 from datetime import datetime
 
-from user.models import UserProfile
-from questions.models import QuestionInfo
-from paper.models import PaperInfo
-from examination.models import ExaminationInfo
+from apps.user.models import UserProfile
+from apps.questions.models import QuestionInfo
+from apps.paper.models import PaperInfo
+from apps.examination.models import ExaminationInfo
 
 
 # 试卷-试题关联表
