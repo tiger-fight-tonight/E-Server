@@ -13,7 +13,7 @@ class PaperQuestion(models.Model):
     paper = models.ForeignKey(PaperInfo, on_delete=models.CASCADE, verbose_name='试卷信息')
     score = models.FloatField(default=0, verbose_name='题目分数')
     create_time = models.DateTimeField(default=datetime.now, verbose_name='创建时间')
-    update_time = models.DateTimeField(default=datetime.now, auto_now=True, verbose_name='更新时间')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
 
     class Meta:
         verbose_name = '试卷-试题关联信息'
@@ -28,7 +28,7 @@ class ReportInfo(models.Model):
     examination = models.ForeignKey(ExaminationInfo, on_delete=models.CASCADE, verbose_name='考试信息')
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name='考生信息')
     grade = models.FloatField(default=0, verbose_name='学生得分')
-    submit_time = models.DateTimeField(default=datetime.now, auto_now=True, verbose_name='提交时间')
+    submit_time = models.DateTimeField(auto_now=True, verbose_name='提交时间')
     create_time = models.DateTimeField(default=datetime.now, verbose_name='创建时间')
 
     class Meta:
@@ -53,3 +53,19 @@ class AnswerCard(models.Model):
 
     def __str__(self):
         return '{0}({1})'.format(self.examination.title, self.user.username)
+
+
+# 系统识别码
+class SystemCode(models.Model):
+    type = models.CharField(max_length=5, verbose_name='类型')
+    name = models.CharField(max_length=20, verbose_name='名称')
+    value = models.IntegerField(verbose_name='Code信息')
+    create_time = models.DateTimeField(default=datetime.now, verbose_name='创建时间')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
+
+    class Meta:
+        verbose_name = '系统识别码'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name

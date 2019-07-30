@@ -22,7 +22,7 @@ class ExaminationInfo(models.Model):
     state = models.IntegerField(default=0, null=False, blank=False, verbose_name='考试状态')
     creator_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name='创建人')
     create_time = models.DateTimeField(default=datetime.now, verbose_name='创建时间')
-    update_time = models.DateTimeField(default=datetime.now, auto_now=True, verbose_name='更新时间')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
 
     class Meta:
         verbose_name = '考试信息'

@@ -16,10 +16,10 @@ class PaperInfo(models.Model):
     subject = models.ForeignKey(SubjectInfo, on_delete=models.CASCADE, verbose_name='课程')
     is_public = models.BooleanField(default=False, verbose_name='是否分享')
     score = models.FloatField(null=False, blank=False, verbose_name='试卷分数')
-    creator_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name='创建人')
-    owner_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name='拥有人')
+    creator_id = models.CharField(max_length=50, null=False, blank=False, verbose_name='创建人')
+    owner_id = models.CharField(max_length=50, null=False, blank=False, verbose_name='拥有人')
     create_time = models.DateTimeField(default=datetime.now, verbose_name='创建时间')
-    update_time = models.DateTimeField(default=datetime.now, auto_now=True, verbose_name='更新时间')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
 
     class Meta:
         verbose_name = '试卷信息'
