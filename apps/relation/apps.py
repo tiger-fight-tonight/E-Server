@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class RelationConfig(AppConfig):
-    name = 'apps.relation'
+    name = 'relation'
+    verbose_name = '关系信息'

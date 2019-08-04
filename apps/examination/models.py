@@ -3,8 +3,8 @@ import uuid
 from django.db import models
 from datetime import datetime
 
-from apps.user.models import UserProfile
-from apps.paper.models import PaperInfo
+from user.models import UserProfile
+from paper.models import PaperInfo
 
 
 # 考试信息表

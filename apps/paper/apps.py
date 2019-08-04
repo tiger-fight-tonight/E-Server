@@ -2,4 +2,6 @@ from django.apps import AppConfig
 
 
 class PaperConfig(AppConfig):
-    name = 'apps.paper'
+    name = 'paper'
+    verbose_name = '试卷信息'
+

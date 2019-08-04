@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class QuestionsConfig(AppConfig):
-    name = 'apps.questions'
+    name = 'questions'
+    verbose_name = '试题信息'

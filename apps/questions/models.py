@@ -3,7 +3,7 @@ import uuid
 from django.db import models
 from datetime import datetime
 
-from apps.user.models import UserProfile, SubjectInfo
+from user.models import UserProfile, SubjectInfo
 
 
 # 试题信息表
