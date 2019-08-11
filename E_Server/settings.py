@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'paper',
     'examination',
     'relation',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
